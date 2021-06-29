@@ -7,18 +7,4 @@ Java Score Saber API Wrapper
 > Google Gson v2.8.7
 
 ## Installation
-### Maven
-```xml
-<dependencies>
-  <dependency>
-    <groupId>dev.MillzyG</groupId>
-    <artifactId>JSSA</artifactId>
-    <version>1.0</version>
-  </dependency>
-  <dependency>
-    <groupId>com.google.code.gson</groupId>
-    <artifactId>gson</artifactId>
-    <version>2.8.7</version>
-  </dependency>
-</dependencies>
-  ```
+At the moment you have to download the Jar file(s) from the releases section until i can get a successful maven deployment.
