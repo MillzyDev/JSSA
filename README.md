@@ -34,14 +34,26 @@ At the moment JSSA must be added to your project manually with a compiled JAR fi
 
 [JSSA DOWNLOAD]()
 
-## Documentation
-### getPlayer() - Gets full player data using provided ID
+# Documentation
+A more in depth documentation can be found on [My Website]().
+## Example
+The Example below shold help you get started with using JSSA.
+```java
+  JSSA jssa = new JSSA(); // This is the main Object containing 2 Objects, Players and Requests.
+
+  Players players = jssa.Players; // The Players Object contains methods to find players. getPlayer() and searchPlayers()
+  Requests requests = jssa.Requests; // The Requests Object contains methods to find Songs.
+```
+  
+## Methods
+---
+### getPlayer() - Returns full player data using provided ID
 `getPlayer()` takes 1 `String` argument which is the player's ID. For the example below we will be using Tempex's ID.
 ```java
         JSSA jssa = new JSSA();
         Gson converter = new GsonBuilder().setPrettyPrinting().create();
 
-        String id = "76561198075009026";
+        String id = "76561198075009026"; // Tempex's ID
 
         String playerJson = converter.toJson(
                 jssa.Players.GetPlayer(id)
@@ -49,7 +61,8 @@ At the moment JSSA must be added to your project manually with a compiled JAR fi
 
         System.out.println(playerJson);
 ```
-You can expect an output in the console like this: ```
+You can expect an output in the console like this: 
+```
 {
   "playerInfo": {
     "playerId": "76561198075009026",
@@ -65,5 +78,33 @@ You can expect an output in the console like this: ```
   }
 }
 ```
+---
+### searchPlayers() - Returns an ArrayList of SimplePlayer objects
+`searchPlayers()` takes 1 `String` argument which is the name you are searching for. It MUST be between 3 and 18 characters. For the example below, we will use "Tempex" as the search query.
+```java
+        JSSA jssa = new JSSA();
+        Gson converter = new GsonBuilder().setPrettyPrinting().create();
 
+        String search = "Tempex";
+
+        String playersJson = converter.toJson(
+                jssa.Players.SearchPlayers(search)
+        );
+
+        System.out.println(playersJson);
+```
+You should expect an output like this:
+```
+[
+  {
+    "playerId": "76561198075009026",
+    "playerName": "Tempex",
+    "rank": 3315,
+    "pp": 7830.24,
+    "avatar": "/api/static/avatars/76561198075009026.jpg",
+    "country": "NO",
+    ...
+  }
+]
+```
 ## Support
