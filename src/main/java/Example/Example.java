@@ -8,6 +8,7 @@ public class Example {
     public static void main(String[] args) throws IOException {
         System.out.println("What Example would you like to see?");
         System.out.println("[1] GetPlayer()");
+        System.out.println("[1] SearchPlayers()");
         System.out.println("Enter a number: ");
 
         BufferedReader reader = new BufferedReader(
@@ -19,6 +20,9 @@ public class Example {
         switch (code) {
             case 1:
                 GetPlayerExample.GetPlayer();
+                break;
+            case 2:
+                SearchPlayersExample.SearchPlayers();
                 break;
             default:
                 System.out.println("Invalid Input...");
