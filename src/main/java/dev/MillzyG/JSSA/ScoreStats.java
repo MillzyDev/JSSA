@@ -1,23 +1,38 @@
 package dev.MillzyG.JSSA;
 
+import com.google.gson.JsonObject;
+
 public class ScoreStats {
+    /**
+     * The player's total accumulated score
+     */
     public int totalScore;
+    /**
+     * The player's total ranked score
+     */
     public int totalRankedScore;
+    /**
+     * The player's average hit accuracy
+     */
     public float averageRankedAccuracy;
+    /**
+     * The total number of songs the player has played
+     */
     public int totalPlayCount;
+    /**
+     * The total number of songs the player has played
+     */
     public int rankedPlayCount;
 
-    ScoreStats(
-            int _totalScore,
-            int _totalRankedScore,
-            float _averageRankedAccuracy,
-            int _totalPlayCount,
-            int _rankedPlayCount
-    ) {
-        totalScore = _totalScore;
-        totalRankedScore = _totalRankedScore;
-        averageRankedAccuracy = _averageRankedAccuracy;
-        totalPlayCount = _totalPlayCount;
-        rankedPlayCount = _rankedPlayCount;
+    /**
+     *
+     * @param jsonObject A Gson JsonObject is taken as an argument and then gets converted into an object.
+     */
+    ScoreStats(JsonObject jsonObject) {
+        this.totalScore = jsonObject.get("totalScore").getAsInt();
+        this.totalRankedScore = jsonObject.get("totalRankedScore").getAsInt();
+        this.averageRankedAccuracy = jsonObject.get("averageRankedAccuracy").getAsFloat();
+        this.totalPlayCount = jsonObject.get("totalPlayCount").getAsInt();
+        this.rankedPlayCount = jsonObject.get("rankedPlayCount").getAsInt();
     }
 }
