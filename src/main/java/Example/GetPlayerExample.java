@@ -12,9 +12,11 @@ public class GetPlayerExample {
         JSSA jssa = new JSSA();
         Gson converter = new GsonBuilder().setPrettyPrinting().create();
 
-        String endersId = "76561198076657570";
+        String id = "76561198075009026";
 
-        String playerJson = converter.toJson(jssa.Players.GetPlayer(endersId));
+        String playerJson = converter.toJson(
+                jssa.Players.GetPlayer(id)
+        );
 
         System.out.println(playerJson);
     }

@@ -13,7 +13,9 @@ public class SearchPlayersExample {
 
         String search = "Tempex";
 
-        String playersJson = converter.toJson(jssa.Players.SearchPlayers(search));
+        String playersJson = converter.toJson(
+                jssa.Players.SearchPlayers(search)
+        );
 
         System.out.println(playersJson);
     }
