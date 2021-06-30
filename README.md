@@ -1,10 +1,6 @@
-# JSSA
-Java Score Saber API Wrapper
+# JSSA (Java Score Saber API)
+JSSA aims to provide a clean and full wrapping of the Score Saber API. At the moment this Library only supports the Player section of the API as the API currently lacks documentation, but it will update in the future.
 
-## Requirements
-> JDK 16 (Recommended)
->
-> Google Gson v2.8.7
+## Summary
 
-## Installation
-At the moment you have to download the Jar file(s) from the releases section until i can get a successful maven deployment.
+## Download
