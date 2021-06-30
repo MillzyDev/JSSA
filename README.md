@@ -30,7 +30,40 @@ dependencies {
 ```
 
 ## Download
+At the moment JSSA must be added to your project manually with a compiled JAR file. It can be downloaded here:
+
+[JSSA DOWNLOAD]()
 
 ## Documentation
+### getPlayer() - Gets full player data using provided ID
+`getPlayer()` takes 1 `String` argument which is the player's ID. For the example below we will be using Tempex's ID.
+```java
+        JSSA jssa = new JSSA();
+        Gson converter = new GsonBuilder().setPrettyPrinting().create();
+
+        String id = "76561198075009026";
+
+        String playerJson = converter.toJson(
+                jssa.Players.GetPlayer(id)
+        );
+
+        System.out.println(playerJson);
+```
+You can expect an output in the console like this: ```
+{
+  "playerInfo": {
+    "playerId": "76561198075009026",
+    "playerName": "Tempex",
+    "avatar": "/api/static/avatars/76561198075009026.jpg",
+    ...
+  },
+  "scoreStats": {
+    "totalScore": 1518466825,
+    "totalRankedScore": 144705269,
+    "averageRankedAccuracy": 85.9466,
+    ...
+  }
+}
+```
 
 ## Support
