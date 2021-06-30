@@ -1,5 +1,7 @@
 package dev.MillzyG.JSSA;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
@@ -8,6 +10,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
 
 public class Players extends Base {
     /**
@@ -25,5 +28,23 @@ public class Players extends Base {
 
         JsonObject jsonObject = JsonParser.parseReader(new InputStreamReader((InputStream) request.getContent())).getAsJsonObject();
         return new Player(jsonObject);
+    }
+
+    public Object[] SearchPlayers(String name) throws IOException {
+        String sURL = baseURL + "/api/players/by-name/" + name;
+
+        URL url = new URL(sURL);
+        URLConnection request = url.openConnection();
+        request.connect();
+
+        JsonObject jsonObject = JsonParser.parseReader(new InputStreamReader((InputStream) request.getContent())).getAsJsonObject();
+        JsonArray jsonArray = jsonObject.get("players").getAsJsonArray();
+
+        ArrayList<SimplePlayer> players = new ArrayList<SimplePlayer>();
+        for (JsonElement player : jsonArray) {
+            players.add(new SimplePlayer((JsonObject) player));
+        }
+
+        return players.toArray();
     }
 }

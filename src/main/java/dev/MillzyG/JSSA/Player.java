@@ -22,8 +22,6 @@ public class Player { // Player Class
      */
     Player(JsonObject jsonObject) throws IOException {
 
-        Gson converter = new Gson(); // Gson object for type conversion
-
         JsonObject playerInfoObj = jsonObject.getAsJsonObject("playerInfo");
         playerInfo = new PlayerInfo(playerInfoObj);
 
