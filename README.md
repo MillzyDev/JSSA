@@ -6,7 +6,7 @@ There is no documentation for ScoreSaber's API as of yet, but i have covered mos
 
 1. [Prequisites](#prequisites)
 2. [Download](#download)
-3. [Documentation](#docmentation)
+3. [Documentation](#documentation)
 4. [Support](#support)
 
 ## Prequisites
