@@ -32,7 +32,7 @@ dependencies {
 ## Download
 At the moment JSSA must be added to your project manually with a compiled JAR file. It can be downloaded here:
 
-[JSSA DOWNLOAD]()
+[JSSA DOWNLOAD](https://github.com/MillzyG/JSSA/releases/latest)
 
 # Documentation
 A more in depth documentation can be found on [My Website]().
