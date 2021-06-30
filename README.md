@@ -46,7 +46,6 @@ The Example below shold help you get started with using JSSA.
 ```
   
 ## Methods
----
 ### getPlayer() - Returns full player data using provided ID
 `getPlayer()` takes 1 `String` argument which is the player's ID. For the example below we will be using Tempex's ID.
 ```java
