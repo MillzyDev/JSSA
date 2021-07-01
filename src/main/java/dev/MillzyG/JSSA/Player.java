@@ -10,6 +10,7 @@ public class Player { // Player Class
      * Player Info containing ID, Username, Avatar, Country...etc.
      */
     public PlayerInfo playerInfo;
+
     /**
      * Score Stats containing accuracy, scores...etc.
      */

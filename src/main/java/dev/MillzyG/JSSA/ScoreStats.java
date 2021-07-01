@@ -7,18 +7,22 @@ public class ScoreStats {
      * The player's total accumulated score
      */
     public int totalScore;
+
     /**
      * The player's total ranked score
      */
     public int totalRankedScore;
+
     /**
      * The player's average hit accuracy
      */
     public float averageRankedAccuracy;
+
     /**
      * The total number of songs the player has played
      */
     public int totalPlayCount;
+
     /**
      * The total number of songs the player has played
      */

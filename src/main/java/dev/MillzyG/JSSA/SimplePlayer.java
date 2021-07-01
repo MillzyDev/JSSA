@@ -3,13 +3,44 @@ package dev.MillzyG.JSSA;
 import com.google.gson.JsonObject;
 
 public class SimplePlayer {
+    /**
+     * Player's ID
+     */
     public String playerId;
+
+    /**
+     * Player's username
+     */
     public String playerName;
+
+    /**
+     * Player's global rank
+     */
     public int rank;
+
+    /**
+     * Player's performance points
+     */
     public float pp;
+
+    /**
+     * Player's avatar path from base url
+     */
     public String avatar;
+
+    /**
+     * Player's 2 letter country code
+     */
     public String country;
+
+    /**
+     *
+     */
     public String history;
+
+    /**
+     *
+     */
     public int difference;
 
     public SimplePlayer(JsonObject jsonObject) {

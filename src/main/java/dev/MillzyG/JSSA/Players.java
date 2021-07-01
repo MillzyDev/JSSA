@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class Players extends Base {
     /**
-     *
+     *  Searches for a single player based on ID given
      * @param id The Player's ID is used to search for the player
      * @return A Player Object containing all the data received
      * @throws IOException
@@ -30,7 +30,13 @@ public class Players extends Base {
         return new Player(jsonObject);
     }
 
-    public Object[] SearchPlayers(String name) throws IOException {
+    /**
+     * Searches for players
+     * @param name
+     * @return
+     * @throws IOException
+     */
+    public ArrayList<SimplePlayer> SearchPlayers(String name) throws IOException {
         String sURL = baseURL + "/api/players/by-name/" + name;
 
         URL url = new URL(sURL);
@@ -45,6 +51,6 @@ public class Players extends Base {
             players.add(new SimplePlayer((JsonObject) player));
         }
 
-        return players.toArray();
+        return players;
     }
 }

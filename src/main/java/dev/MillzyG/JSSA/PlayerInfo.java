@@ -8,50 +8,62 @@ public class PlayerInfo {
      * The player's unique ID
      */
     public String playerId;
+
     /**
      * The player's username
      */
     public String playerName;
+
     /**
      * The player's avatar path
      */
     public String avatar;
+
     /**
      * The player's global rank
      */
     public int rank;
+
     /**
      * The player's national rank
      */
     public int countryRank;
+
     /**
      * The player's performance points
      */
     public float pp;
+
     /**
      * The player's 2 letter country code
      */
     public String country;
+
     /**
      * The player's Score Saber role
      */
     public String role;
+
     /**
      * The player's Score Saber badges
      */
     public String[] badges;
+
     /**
      * The player's history
      */
     public String history;
+
     /**
      * The player's permissions
      */
     public int permissions;
+
     /**
      *
      */
     public int inactive;
+
     /**
      *
      */
