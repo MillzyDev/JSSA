@@ -12,7 +12,7 @@ public class GetBelowTopRequestsExample {
         Gson converter = new GsonBuilder().setPrettyPrinting().create();
 
         String requestJson = converter.toJson(
-                jssa.Requests.GetBelowTopRequests().get(0)
+                jssa.Requests.getBelowTopRequests().get(0)
         );
 
         System.out.println(requestJson);

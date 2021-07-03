@@ -15,7 +15,7 @@ public class GetPlayerExample {
         String id = "76561198075009026";
 
         String playerJson = converter.toJson(
-                jssa.Players.GetPlayer(id)
+                jssa.Players.getPlayer(id)
         );
 
         System.out.println(playerJson);

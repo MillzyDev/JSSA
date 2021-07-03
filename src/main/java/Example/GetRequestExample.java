@@ -14,7 +14,7 @@ public class GetRequestExample {
         String req = "6243";
 
         String requestJson = converter.toJson(
-                jssa.Requests.GetRequest(req)
+                jssa.Requests.getRequest(req)
         );
 
         System.out.println(requestJson);
