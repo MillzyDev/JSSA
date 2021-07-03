@@ -19,7 +19,7 @@ public class Players extends Base {
      * @return A Player Object containing all the data received
      * @throws IOException
      */
-    public Player GetPlayer(String id) throws IOException { // Gets Score Saber player from provided ID
+    public Player getPlayer(String id) throws IOException { // Gets Score Saber player from provided ID
         String sURL = baseURL + "/api/player/" + id + "/full";
 
         //URL url = new URL(sURL);
@@ -40,7 +40,7 @@ public class Players extends Base {
      * @return
      * @throws IOException
      */
-    public ArrayList<SimplePlayer> SearchPlayers(String name) throws IOException {
+    public ArrayList<SimplePlayer> searchPlayers(String name) throws IOException {
         String sURL = baseURL + "/api/players/by-name/" + name;
 
         //URL url = new URL(sURL);

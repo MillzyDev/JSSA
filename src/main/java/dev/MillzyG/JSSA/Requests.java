@@ -14,7 +14,7 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 
 public class Requests extends Base {
-    public ArrayList<SimpleRequest> GetTopRequests() throws IOException {
+    public ArrayList<SimpleRequest> getTopRequests() throws IOException {
         String sURL = baseURL + "/api/ranking/requests/top";
 
         //URL url = new URL(sURl);
@@ -38,7 +38,7 @@ public class Requests extends Base {
         return out;
     }
 
-    public ArrayList<SimpleRequest> GetBelowTopRequests() throws IOException {
+    public ArrayList<SimpleRequest> getBelowTopRequests() throws IOException {
         String sURL = baseURL + "/api/ranking/requests/belowTop";
 
         //URL url = new URL(sURl);
@@ -68,7 +68,7 @@ public class Requests extends Base {
      * @return Returns matching request
      * @throws IOException
      */
-    public Request GetRequest(String req) throws IOException {
+    public Request getRequest(String req) throws IOException {
         String sURL = baseURL + "/api/ranking/request/" + req;
 
         //URL url = new URL(sURl);
