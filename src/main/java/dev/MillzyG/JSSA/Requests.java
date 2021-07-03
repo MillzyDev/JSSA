@@ -27,13 +27,17 @@ public class Requests extends Base {
      * @throws IOException
      */
     public Request GetRequest(String req) throws IOException {
-        String sURl = baseURL + "/api/ranking/request/" + req;
+        String sURL = baseURL + "/api/ranking/request/" + req;
 
-        URL url = new URL(sURl);
-        URLConnection request = url.openConnection();
-        request.connect();
+        //URL url = new URL(sURl);
+        //URLConnection request = url.openConnection();
+        //request.connect();
 
-        JsonObject jsonObject = JsonParser.parseReader(new InputStreamReader((InputStream) request.getContent())).getAsJsonObject();
+        String curlCommand = "curl -X GET " + sURL;
+        ProcessBuilder processBuilder = new ProcessBuilder(curlCommand.split(" "));
+        Process process = processBuilder.start();
+
+        JsonObject jsonObject = JsonParser.parseReader(new InputStreamReader(process.getInputStream())).getAsJsonObject();
         return new Request(jsonObject);
     }
 }

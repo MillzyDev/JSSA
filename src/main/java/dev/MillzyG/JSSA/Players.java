@@ -22,11 +22,15 @@ public class Players extends Base {
     public Player GetPlayer(String id) throws IOException { // Gets Score Saber player from provided ID
         String sURL = baseURL + "/api/player/" + id + "/full";
 
-        URL url = new URL(sURL);
-        URLConnection request = url.openConnection();
-        request.connect();
+        //URL url = new URL(sURL);
+        //URLConnection request = url.openConnection();
+        //request.connect();
 
-        JsonObject jsonObject = JsonParser.parseReader(new InputStreamReader((InputStream) request.getContent())).getAsJsonObject();
+        String curlCommand = "curl -X GET " + sURL;
+        ProcessBuilder processBuilder = new ProcessBuilder(curlCommand.split(" "));
+        Process process = processBuilder.start();
+
+        JsonObject jsonObject = JsonParser.parseReader(new InputStreamReader(process.getInputStream())).getAsJsonObject();
         return new Player(jsonObject);
     }
 
@@ -39,11 +43,15 @@ public class Players extends Base {
     public ArrayList<SimplePlayer> SearchPlayers(String name) throws IOException {
         String sURL = baseURL + "/api/players/by-name/" + name;
 
-        URL url = new URL(sURL);
-        URLConnection request = url.openConnection();
-        request.connect();
+        //URL url = new URL(sURL);
+        //URLConnection request = url.openConnection();
+        //request.connect();
 
-        JsonObject jsonObject = JsonParser.parseReader(new InputStreamReader((InputStream) request.getContent())).getAsJsonObject();
+        String curlCommand = "curl -X GET " + sURL;
+        ProcessBuilder processBuilder = new ProcessBuilder(curlCommand.split(" "));
+        Process process = processBuilder.start();
+
+        JsonObject jsonObject = JsonParser.parseReader(new InputStreamReader(process.getInputStream())).getAsJsonObject();
         JsonArray jsonArray = jsonObject.get("players").getAsJsonArray();
 
         ArrayList<SimplePlayer> players = new ArrayList<SimplePlayer>();
