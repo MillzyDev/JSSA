@@ -10,7 +10,7 @@ There is no documentation for ScoreSaber's API as of yet, but i have covered mos
 4. [Support](#support)
 
 ## Prequisites
-JSSA required Gson to function properly; It is used to handle JSON objects that are directly fetched from Score Saber's API.
+JSSA requires Gson to function properly; It is used to handle JSON objects that are directly fetched from Score Saber's API.
 
 It can be Installed as shown below.
 
