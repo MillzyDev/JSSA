@@ -30,12 +30,10 @@ dependencies {
 ```
 
 ## Download
-At the moment JSSA must be added to your project manually with a compiled JAR file. It can be downloaded here:
-
-[JSSA DOWNLOAD](https://github.com/MillzyG/JSSA/releases/latest)
+At the moment JSSA must be added to your project manually with a compiled JAR file. The Library, Javadoc and Sources JARs can be found in [Latest Releases](https://github.com/MillzyDev/JSSA/releases/latest)
 
 # Documentation
-A more in depth documentation can be found on [My Website]().
+A more in depth documentation can be found [Here]().
 ## Example
 The Example below shold help you get started with using JSSA.
 ```java
@@ -78,7 +76,7 @@ You can expect an output in the console like this:
 }
 ```
 ---
-### searchPlayers() - Returns an ArrayList of SimplePlayer objects
+### searchPlayers()
 `searchPlayers()` takes 1 `String` argument which is the name you are searching for. It MUST be between 3 and 18 characters. For the example below, we will use "Tempex" as the search query.
 ```java
         JSSA jssa = new JSSA();
@@ -106,4 +104,35 @@ You should expect an output like this:
   }
 ]
 ```
+### getRequest
+`getRequest()` takes 1 `String` argument, the request number. We will use the Rainbow Road request number here (`6243`)
+```java
+        JSSA jssa = new JSSA(); // Create new JSSA object
+        Gson converter = new GsonBuilder().setPrettyPrinting().create(); Enable Pretty Printing
+
+        String req = "6243"; // Request number
+
+        String requestJson = converter.toJson( // Convert given object to json
+                jssa.Requests.getRequest(req) // Get Request Object
+        );
+
+        System.out.println(requestJson); // Print JSON String
+```
+The method returns a `Request` object containing all necesary values. You can expect an output like this:
+```
+{
+  "songId": 342019,
+  "requestType": 1,
+  "description": "rainbows O(\u0026cap;_\u0026cap;)O",
+  "approved": 0,
+  "id": "4AFB4CA509F424155E0578BF1DFD6D23142E38FE",
+  "name": "Rainbow Road",
+  "levelAuthorName": "lobsterrrrrrrr",
+  "difficulty": 3,
+  "rankUpvotes": 1,
+  "rankDownvotes": 0,
+  ...
+```
+### getTopRequests
+
 ## Support
