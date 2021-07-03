@@ -1,5 +1,7 @@
 package dev.MillzyG.JSSA;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
@@ -12,13 +14,53 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 
 public class Requests extends Base {
-    //ArrayList<Request> GetTopRequests() {
+    public ArrayList<SimpleRequest> GetTopRequests() throws IOException {
+        String sURL = baseURL + "/api/ranking/requests/top";
 
-    //}
+        //URL url = new URL(sURl);
+        //URLConnection request = url.openConnection();
+        //request.connect();
 
-    //ArrayList<Request> GetAllRequests() {
+        String curlCommand = "curl -X GET " + sURL;
+        ProcessBuilder processBuilder = new ProcessBuilder(curlCommand.split(" "));
+        Process process = processBuilder.start();
 
-    //}
+        JsonObject jsonObject = JsonParser.parseReader(new InputStreamReader(process.getInputStream())).getAsJsonObject();
+        JsonArray jsonArray = jsonObject.get("requests").getAsJsonArray();
+
+        ArrayList<SimpleRequest> out = new ArrayList<SimpleRequest>();
+
+        for (JsonElement jsonElement : jsonArray) {
+            SimpleRequest simpleRequest = new SimpleRequest(jsonElement.getAsJsonObject());
+            out.add(simpleRequest);
+        }
+
+        return out;
+    }
+
+    public ArrayList<SimpleRequest> GetBelowTopRequests() throws IOException {
+        String sURL = baseURL + "/api/ranking/requests/belowTop";
+
+        //URL url = new URL(sURl);
+        //URLConnection request = url.openConnection();
+        //request.connect();
+
+        String curlCommand = "curl -X GET " + sURL;
+        ProcessBuilder processBuilder = new ProcessBuilder(curlCommand.split(" "));
+        Process process = processBuilder.start();
+
+        JsonObject jsonObject = JsonParser.parseReader(new InputStreamReader(process.getInputStream())).getAsJsonObject();
+        JsonArray jsonArray = jsonObject.get("requests").getAsJsonArray();
+
+        ArrayList<SimpleRequest> out = new ArrayList<SimpleRequest>();
+
+        for (JsonElement jsonElement : jsonArray) {
+            SimpleRequest simpleRequest = new SimpleRequest(jsonElement.getAsJsonObject());
+            out.add(simpleRequest);
+        }
+
+        return out;
+    }
 
     /**
      * Searches for a single request based on request number given.
