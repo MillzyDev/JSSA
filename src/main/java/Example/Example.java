@@ -11,6 +11,8 @@ public class Example {
             System.out.println("[1] GetPlayer()");
             System.out.println("[2] SearchPlayers()");
             System.out.println("[3] GetRequest()");
+            System.out.println("[4] GetTopRequests()");
+            System.out.println("[5] GetBelowTopRequests()");
             System.out.print("Enter a number: ");
 
             BufferedReader reader = new BufferedReader(
@@ -28,6 +30,8 @@ public class Example {
                     break;
                 case 3:
                     GetRequestExample.GetRequest();
+                case 4:
+                    GetTopRequestsExample.GetTopRequests();
                 default:
                     System.out.println("Invalid Input...");
             }
