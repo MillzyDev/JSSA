@@ -3,6 +3,10 @@ package dev.MillzyG.JSSA;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
+/**
+ * Represents a the playerInfo JSON object found when searching for a player
+ * @since v0.1.0
+ */
 public class PlayerInfo {
     /**
      * The player's unique ID

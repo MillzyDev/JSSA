@@ -2,6 +2,10 @@ package dev.MillzyG.JSSA;
 
 import com.google.gson.JsonObject;
 
+/**
+ * Represents a request listed in the top requests or below top requests
+ * @since v0.3.0
+ */
 public class SimpleRequest {
     /**
      * Request number
@@ -63,6 +67,10 @@ public class SimpleRequest {
      */
     public int difficulties;
 
+    /**
+     * Constructs a new SimpleRequest object
+     * @param jsonObject the given json object gets converted into a SimpleRequest Object
+     */
     public SimpleRequest(JsonObject jsonObject) {
         this.request = jsonObject.get("request").getAsInt();
         this.songId = jsonObject.get("songId").getAsInt();

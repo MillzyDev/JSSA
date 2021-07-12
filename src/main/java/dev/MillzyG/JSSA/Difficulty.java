@@ -2,6 +2,10 @@ package dev.MillzyG.JSSA;
 
 import com.google.gson.JsonObject;
 
+/**
+ * Represents a difficulty in a request
+ * @since v0.3.0
+ */
 public class Difficulty {
     /**
      * Request number

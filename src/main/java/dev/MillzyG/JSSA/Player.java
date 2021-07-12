@@ -5,14 +5,18 @@ import com.google.gson.JsonObject;
 
 import java.io.IOException;
 
+/**
+ * Represents a Score Saber Player JSON object
+ * @since v0.1.0
+ */
 public class Player { // Player Class
     /**
-     * Player Info containing ID, Username, Avatar, Country...etc.
+     * Represents the PlayerInfo JSON object
      */
     public PlayerInfo playerInfo;
 
     /**
-     * Score Stats containing accuracy, scores...etc.
+     * Represents the ScoreStats JSON object
      */
     public ScoreStats scoreStats;
 

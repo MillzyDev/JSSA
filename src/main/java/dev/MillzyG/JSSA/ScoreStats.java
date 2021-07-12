@@ -2,6 +2,9 @@ package dev.MillzyG.JSSA;
 
 import com.google.gson.JsonObject;
 
+/**
+ * Represents a scoreStats Object in a Player Object
+ */
 public class ScoreStats {
     /**
      * The player's total accumulated score
@@ -29,7 +32,7 @@ public class ScoreStats {
     public int rankedPlayCount;
 
     /**
-     *
+     *  Constructs a new ScoreStats object
      * @param jsonObject A Gson JsonObject is taken as an argument and then gets converted into an object.
      */
     ScoreStats(JsonObject jsonObject) {

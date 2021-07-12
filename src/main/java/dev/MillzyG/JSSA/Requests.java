@@ -14,6 +14,12 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 
 public class Requests extends Base {
+    /**
+     * Fetches the top requests from the leaderboard
+     * @since 0.4.0
+     * @return A list of SimplePlayer Objects from the top of the leaderboard
+     * @throws IOException
+     */
     public ArrayList<SimpleRequest> getTopRequests() throws IOException {
         String sURL = baseURL + "/api/ranking/requests/top";
 
@@ -38,6 +44,12 @@ public class Requests extends Base {
         return out;
     }
 
+    /**
+     * Fetches requests that are not top of the leaderboard
+     * @since v0.4.0
+     * @return
+     * @throws IOException
+     */
     public ArrayList<SimpleRequest> getBelowTopRequests() throws IOException {
         String sURL = baseURL + "/api/ranking/requests/belowTop";
 
@@ -67,6 +79,7 @@ public class Requests extends Base {
      * @param req request number
      * @return Returns matching request
      * @throws IOException
+     * @since v0.3.0
      */
     public Request getRequest(String req) throws IOException {
         String sURL = baseURL + "/api/ranking/request/" + req;

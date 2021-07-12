@@ -9,6 +9,10 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
+/**
+ * Represents a full request from a specific ID
+ * @since v0.2.0
+ */
 public class Request {
     /**
      * The id of the song

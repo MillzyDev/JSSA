@@ -12,10 +12,15 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 
+/**
+ * Contains player methods
+ * @since v0.1.0
+ */
 public class Players extends Base {
     /**
      *  Searches for a single player based on ID given
-     * @param id The Player's ID is used to search for the player
+     * @since v0.1.0
+     * @param id The ID of the desired player
      * @return A Player Object containing all the data received
      * @throws IOException
      */
@@ -35,9 +40,10 @@ public class Players extends Base {
     }
 
     /**
-     * Searches for players
-     * @param name
-     * @return
+     * Searches for players based on given name
+     * @since v0.2.0
+     * @param name The name of the desired player to be searched for
+     * @return A List of Simple Player Objects
      * @throws IOException
      */
     public ArrayList<SimplePlayer> searchPlayers(String name) throws IOException {

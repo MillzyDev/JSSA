@@ -2,6 +2,10 @@ package dev.MillzyG.JSSA;
 
 import com.google.gson.JsonObject;
 
+/**
+ * @since v0.2.0
+ * Represents the Player object listed in player search results
+ */
 public class SimplePlayer {
     /**
      * Player's ID
@@ -43,6 +47,10 @@ public class SimplePlayer {
      */
     public int difference;
 
+    /**
+     * Constructs a SimplePlayer
+     * @param jsonObject the provided JSON object gets converted into a Simple Player object
+     */
     public SimplePlayer(JsonObject jsonObject) {
         this.playerId = jsonObject.get("playerId").getAsString();
         this.playerName = jsonObject.get("playerName").getAsString();
