@@ -1,5 +1,5 @@
 # JSSA (Java Score Saber API)
-JSSA aims to provide a clean and full wrapping of the Score Saber API. At the moment this Library only supports the Player section of the API as the API currently lacks documentation, but it will update in the future.
+JSSA aims to provide a clean and full wrapping of the Score Saber API.
 
 ## Summary
 There is no documentation for ScoreSaber's API as of yet, but i have covered most of it in this library and in the provided examples.
