@@ -26,5 +26,5 @@ hs_err_pid*
 settings.xml
 
 # extra files
-target
-.idea
+target/*
+.idea/*
