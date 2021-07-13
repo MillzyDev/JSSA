@@ -34,8 +34,8 @@ At the moment JSSA must be added to your project manually with a compiled JAR fi
 
 # Documentation
 A more in depth documentation can be found [Here](https://docs.jssa.millzyg.dev).
-## Example
-The Example below should help you get started with using JSSA.
+## example
+The example below should help you get started with using JSSA.
 ```java
           JSSA jssa = new JSSA();
         Gson converter = new GsonBuilder().setPrettyPrinting().create();
