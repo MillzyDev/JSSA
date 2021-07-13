@@ -1,4 +1,4 @@
-package dev.MillzyG.JSSA;
+package dev.millzyg.jssa;
 
 /**
  * Contains base variables used by many parts of the library

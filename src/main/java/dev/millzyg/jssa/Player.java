@@ -1,6 +1,5 @@
-package dev.MillzyG.JSSA;
+package dev.millzyg.jssa;
 
-import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
 import java.io.IOException;

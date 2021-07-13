@@ -1,4 +1,4 @@
-package dev.MillzyG.JSSA;
+package dev.millzyg.jssa;
 
 public class JSSA {
     public Players Players;
