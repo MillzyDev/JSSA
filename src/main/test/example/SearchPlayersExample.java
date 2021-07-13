@@ -1,8 +1,8 @@
-package Example;
+package example;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import dev.MillzyG.JSSA.JSSA;
+import dev.millzyg.jssa.JSSA;
 
 import java.io.IOException;
 
