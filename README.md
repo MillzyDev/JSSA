@@ -55,7 +55,7 @@ Make sure to replace the `VERSION` value below with the one shown above
 <repository>
     <id>github</id>
     <name>MillzyDev</name>
-    <url>https://maven.pkg.github.com/MillzyDev</url>
+    <url>https://maven.pkg.github.com</url>
 </repository>
 ```
 ### Gradle
@@ -69,7 +69,7 @@ repositories {
   mavenCentral() // for transitive dependencies
   maven {
     name 'MillzyDev'
-    url 'https://maven.pkg.github.com/MillzyDev'
+    url 'https://maven.pkg.github.com'
   }
 }
 ```
