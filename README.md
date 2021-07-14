@@ -41,10 +41,41 @@ dependencies {
 Latest Stable Version: [GitHub Release](https://github.com/MillzyDev/JSSA/releases/latest)
 Latest Version: [ ![version][] ][download]
 
+Make sure to replace the `VERSION` value below with the one shown above
+
+### Maven
+```xml
+<dependency>
+    <groupId>dev.MillzyG</groupId>
+    <artifactId>jssa</artifactId>
+    <version>VERSION</version>
+</dependency>
+```
+```xml
+<repository>
+    <id>github</id>
+    <name>MillzyDev</name>
+    <url>https://maven.pkg.github.com/MillzyDev</url>
+</repository>
+```
+### Gradle
+```gradle
+dependencies {
+    //Change 'implementation' to 'compile' in old Gradle versions
+    implementation("dev.MillzyG:jssa:VERSION")
+}
+
+repositories {
+  mavenCentral() // for transitive dependencies
+  maven {
+    name 'MillzyDev'
+    url 'https://maven.pkg.github.com/MillzyDev'
+  }
+}
+```
 # Documentation
-A more in depth documentation can be found [Here](https://docs.jssa.millzyg.dev).
-## example
-The example below should help you get started with using JSSA.
+A full documentation can be found [Here](https://docs.jssa.millzyg.dev). If you are just starting, I suggest you look at the example below
+## Example
 ```java
           JSSA jssa = new JSSA();
         Gson converter = new GsonBuilder().setPrettyPrinting().create();
