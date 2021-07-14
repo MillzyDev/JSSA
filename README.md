@@ -1,3 +1,11 @@
+[version]: https://img.shields.io/badge/Download-v0.4.4-blue
+[download]: #download
+[license]: https://github.com/MillzyDev/JSSA/blob/main/LICENSE
+[licenseShield]: https://img.shields.io/badge/License-GNU%20GPLv3-lightgrey
+
+[ ![version][] ][download]
+[ ![licenseShield][] ][license]
+
 # JSSA (Java Score Saber API)
 JSSA aims to provide a clean and full wrapping of the Score Saber API.
 
@@ -30,7 +38,8 @@ dependencies {
 ```
 
 ## Download
-Latest Stable Version: [GitHub Release](https://github.com/MillzyDev/JSSA/releases/latest) Latest Version:
+Latest Stable Version: [GitHub Release](https://github.com/MillzyDev/JSSA/releases/latest)
+Latest Version: [ ![version][] ][download]
 
 # Documentation
 A more in depth documentation can be found [Here](https://docs.jssa.millzyg.dev).
