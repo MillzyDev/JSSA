@@ -30,7 +30,7 @@ dependencies {
 ```
 
 ## Download
-At the moment JSSA must be added to your project manually with a compiled JAR file. The Library, Javadoc and Sources JARs can be found in [Latest Releases](https://github.com/MillzyDev/JSSA/releases/latest)
+Latest Stable Version: [GitHub Release](https://github.com/MillzyDev/JSSA/releases/latest) Latest Version:
 
 # Documentation
 A more in depth documentation can be found [Here](https://docs.jssa.millzyg.dev).
