@@ -1,3 +1,11 @@
+[version]: https://img.shields.io/badge/Download-v0.4.4-blue
+[download]: #download
+[license]: https://github.com/MillzyDev/JSSA/blob/main/LICENSE
+[licenseShield]: https://img.shields.io/badge/License-GNU%20GPLv3-lightgrey
+
+[ ![version][] ][download]
+[ ![licenseShield][] ][license]
+
 # JSSA (Java Score Saber API)
 JSSA aims to provide a clean and full wrapping of the Score Saber API.
 
@@ -30,12 +38,44 @@ dependencies {
 ```
 
 ## Download
-At the moment JSSA must be added to your project manually with a compiled JAR file. The Library, Javadoc and Sources JARs can be found in [Latest Releases](https://github.com/MillzyDev/JSSA/releases/latest)
+Latest Stable Version: [GitHub Release](https://github.com/MillzyDev/JSSA/releases/latest)
+Latest Version: [ ![version][] ][download]
 
+Make sure to replace the `VERSION` value below with the one shown above
+
+### Maven
+```xml
+<dependency>
+    <groupId>dev.MillzyG</groupId>
+    <artifactId>jssa</artifactId>
+    <version>VERSION</version>
+</dependency>
+```
+```xml
+<repository>
+    <id>github</id>
+    <name>MillzyDev</name>
+    <url>https://maven.pkg.github.com</url>
+</repository>
+```
+### Gradle
+```gradle
+dependencies {
+    //Change 'implementation' to 'compile' in old Gradle versions
+    implementation("dev.MillzyG:jssa:VERSION")
+}
+
+repositories {
+  mavenCentral() // for transitive dependencies
+  maven {
+    name 'MillzyDev'
+    url 'https://maven.pkg.github.com'
+  }
+}
+```
 # Documentation
-A more in depth documentation can be found [Here](https://docs.jssa.millzyg.dev).
-## example
-The example below should help you get started with using JSSA.
+A full documentation can be found [Here](https://docs.jssa.millzyg.dev). If you are just starting, I suggest you look at the example below
+## Example
 ```java
           JSSA jssa = new JSSA();
         Gson converter = new GsonBuilder().setPrettyPrinting().create();
