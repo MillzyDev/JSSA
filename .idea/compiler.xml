@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="JSSA" target="8" />
+      <module name="JSSA" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
